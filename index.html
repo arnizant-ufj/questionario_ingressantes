@@ -1,0 +1,1178 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questionário de Ingressantes - UFJ</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .step {
+        display: none;
+      }
+      .step.active {
+        display: block;
+      }
+      .hidden-field {
+        display: none;
+      }
+      .logo-container img {
+        max-width: 200px;
+      }
+    </style>
+  </head>
+  <body class="bg-light pb-5">
+    <div class="container mt-4">
+      <div class="row justify-content-center">
+        <div
+          class="col-md-10 col-lg-8 bg-white p-4 p-md-5 rounded shadow-sm"
+          id="formContainer"
+        >
+          <div class="logo-container text-center mb-4">
+            <img
+              src="prograd.png"
+              alt="Logo Prograd UFJ"
+            />
+          </div>
+
+          <div id="intro" class="text-center mb-4">
+            <h4 class="mb-3">
+              Questionário para o Painel Socioeconômico da Graduação
+            </h4>
+            <p class="text-muted small text-start">
+              A Universidade Federal de Jataí (UFJ) parabeniza e acolhe você...
+              Este questionário possui 42 perguntas, divididas em 5 seções. Suas
+              respostas ajudam a direcionar ações de acolhimento. Uso exclusivo
+              para políticas institucionais (LGPD Lei nº 13.709/2018).
+            </p>
+          </div>
+
+          <form id="formUfj">
+            <div class="step active" id="step1">
+              <h5 class="border-bottom pb-2 mb-4 text-primary">
+                Seção 1: Informações Pessoais
+              </h5>
+
+              <div class="mb-3">
+                <label class="form-label">1 - Qual o seu nome?</label>
+                <input type="text" class="form-control" name="q1" required />
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">2 - Qual sua idade?</label>
+                <select class="form-select" name="q2" required>
+                  <option value="">Selecione...</option>
+                  <option value="Menos de 18">Menos de 18</option>
+                  <option value="Entre 18 e 20 anos">Entre 18 e 20 anos</option>
+                  <option value="Entre 21 e 24 anos">Entre 21 e 24 anos</option>
+                  <option value="Entre 25 e 30 anos">Entre 25 e 30 anos</option>
+                  <option value="Entre 31 e 40 anos">Entre 31 e 40 anos</option>
+                  <option value="Mais de 41 anos">Mais de 41 anos</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label"
+                  >3 - Como você declara seu gênero?</label
+                >
+                <p class="small text-muted mb-1">
+                  Gênero diz respeito aos aspectos sociais atribuídos ao sexo...
+                </p>
+                <select class="form-select" name="q3" required>
+                  <option value="">Selecione...</option>
+                  <option value="Homem Cis">Homem Cis</option>
+                  <option value="Mulher Cis">Mulher Cis</option>
+                  <option value="Homem trans">Homem trans</option>
+                  <option value="Mulher trans">Mulher trans</option>
+                  <option value="Não binário">Não binário</option>
+                  <option value="Prefiro não responder">
+                    Prefiro não responder
+                  </option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label"
+                  >4 - Qual é sua orientação sexual?</label
+                >
+                <select class="form-select" name="q4" required>
+                  <option value="">Selecione...</option>
+                  <option value="Assexual">Assexual</option>
+                  <option value="Bissexual">Bissexual</option>
+                  <option value="Gay">Gay</option>
+                  <option value="Heterossexual">Heterossexual</option>
+                  <option value="Lésbica">Lésbica</option>
+                  <option value="Pansexual">Pansexual</option>
+                  <option value="Queer">Queer</option>
+                  <option value="Intersexo">Intersexo</option>
+                  <option value="Aroace">Aroace</option>
+                  <option value="Prefiro não responder">
+                    Prefiro não responder
+                  </option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">5 - Como você se autodeclara?</label>
+                <select class="form-select" name="q5" id="q5" required>
+                  <option value="">Selecione...</option>
+                  <option value="Pessoa Preta">Pessoa Preta</option>
+                  <option value="Pessoa Parda">Pessoa Parda</option>
+                  <option value="Pessoa Indígena Urbana">
+                    Pessoa Indígena Urbana
+                  </option>
+                  <option value="Pessoa Indígena Aldeada">
+                    Pessoa Indígena Aldeada
+                  </option>
+                  <option value="Pessoa Quilombola Urbana">
+                    Pessoa Quilombola Urbana
+                  </option>
+                  <option value="Pessoa Quilombola Rural">
+                    Pessoa Quilombola Rural
+                  </option>
+                  <option value="Pessoa Amarela de Origem Oriental">
+                    Pessoa Amarela de Origem Oriental
+                  </option>
+                  <option value="Pessoa Cigana">Pessoa Cigana</option>
+                  <option value="Pessoa Branca">Pessoa Branca</option>
+                  <option value="Prefiro não responder">
+                    Prefiro não responder
+                  </option>
+                </select>
+              </div>
+
+              <div class="mb-3 hidden-field" id="divQ6">
+                <label class="form-label text-danger"
+                  >6 - [EXCLUSIVA] Caso você seja pessoa indígena aldeada,
+                  escreva o nome da aldeia:</label
+                >
+                <input type="text" class="form-control" name="q6" id="q6" />
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">7 - Qual seu Estado Civil?</label>
+                <select class="form-select" name="q7" required>
+                  <option value="">Selecione...</option>
+                  <option value="Casado(a)">Casado(a)</option>
+                  <option value="Solteiro(a)">Solteiro(a)</option>
+                  <option value="Divorciado(a)">Divorciado(a)</option>
+                  <option value="União estável">União estável</option>
+                  <option value="Viúvo(a)">Viúvo(a)</option>
+                  <option value="Separado(a) judicialmente">
+                    Separado(a) judicialmente
+                  </option>
+                  <option value="Prefiro não responder">
+                    Prefiro não responder
+                  </option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">8 - Você tem filhos(as)?</label>
+                <select class="form-select" name="q8" id="q8" required>
+                  <option value="">Selecione...</option>
+                  <option value="Sim">Sim</option>
+                  <option value="Não">Não</option>
+                </select>
+              </div>
+
+              <div class="mb-3 hidden-field" id="divQ9">
+                <label class="form-label">9 - Se sim, quantos(as)?</label>
+                <select class="form-select" name="q9" id="q9">
+                  <option value="">Selecione...</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="Mais de 4 filhos(as)">
+                    Mais de 4 filhos(as)
+                  </option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label"
+                  >10 - Em qual Estado você morava antes de estudar na
+                  UFJ?</label
+                >
+                <select class="form-select" name="q10" id="q10" required>
+                  <option value="">Carregando estados...</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label"
+                  >11 - Em qual cidade você morava antes de estudar na
+                  UFJ?</label
+                >
+                <select
+                  class="form-select"
+                  name="q11"
+                  id="q11"
+                  required
+                  disabled
+                >
+                  <option value="">Selecione primeiro o estado</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label"
+                  >12 - A casa em que mora ou morava antes de vir para a UFJ
+                  é:</label
+                >
+                <select class="form-select" name="q12" required>
+                  <option value="">Selecione...</option>
+                  <option value="Própria, não quitada">
+                    Própria, não quitada
+                  </option>
+                  <option value="Própria, quitada">Própria, quitada</option>
+                  <option value="Alugada">Alugada</option>
+                  <option value="Cedida">Cedida</option>
+                  <option value="Ocupação, assentamento">
+                    Ocupação, assentamento
+                  </option>
+                  <option value="Não sei responder">Não sei responder</option>
+                  <option value="Prefiro não responder">
+                    Prefiro não responder
+                  </option>
+                </select>
+              </div>
+
+              <div class="mb-4">
+                <label class="form-label"
+                  >13 - Sua casa fica ou ficava na:</label
+                >
+                <select class="form-select" name="q13" required>
+                  <option value="">Selecione...</option>
+                  <option value="Zona rural">Zona rural</option>
+                  <option value="Zona urbana">Zona urbana</option>
+                  <option value="Comunidade indígena">
+                    Comunidade indígena
+                  </option>
+                  <option value="Comunidade quilombola">
+                    Comunidade quilombola
+                  </option>
+                </select>
+              </div>
+
+              <div class="d-flex justify-content-end">
+                <button type="button" class="btn btn-primary btn-next">
+                  Próxima Seção
+                </button>
+              </div>
+            </div>
+
+            <div class="step" id="step2">
+              <h5 class="border-bottom pb-2 mb-4 text-primary">
+                Seção 2: Informações Familiares
+              </h5>
+
+              <div class="mb-3">
+                <label class="form-label"
+                  >14 - Qual a escolaridade da sua mãe?</label
+                >
+                <select class="form-select" name="q14" required>
+                  <option value="">Selecione...</option>
+                  <option value="Sem instrução">
+                    Sem instrução, não alfabetizada
+                  </option>
+                  <option value="Fund 1 Incompleto">
+                    Ensino fundamental (1ª a 4ª) - INCOMPLETO
+                  </option>
+                  <option value="Fund 1 Completo">
+                    Ensino fundamental (1ª a 4ª) - COMPLETO
+                  </option>
+                  <option value="Fund 2 Incompleto">
+                    Ensino fundamental (5ª a 8ª) - INCOMPLETO
+                  </option>
+                  <option value="Fund 2 Completo">
+                    Ensino fundamental (5ª a 8ª) - COMPLETO
+                  </option>
+                  <option value="Medio Incompleto">
+                    Ensino Médio - INCOMPLETO
+                  </option>
+                  <option value="Medio Completo">
+                    Ensino Médio - COMPLETO
+                  </option>
+                  <option value="Superior Incompleto">
+                    Ensino Superior - INCOMPLETO
+                  </option>
+                  <option value="Superior Completo">
+                    Ensino Superior - COMPLETO
+                  </option>
+                  <option value="Pos Graduacao">
+                    Especialização, Mestrado ou Doutorado
+                  </option>
+                  <option value="Nao tive">Não tive mãe ou responsável</option>
+                  <option value="Nao sei">Não sei responder</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label"
+                  >15 - Qual a escolaridade do seu pai?</label
+                >
+                <select class="form-select" name="q15" required>
+                  <option value="">Selecione...</option>
+                  <option value="Sem instrução">
+                    Sem instrução, não alfabetizada
+                  </option>
+                  <option value="Fund 1 Incompleto">
+                    Ensino fundamental (1ª a 4ª) - INCOMPLETO
+                  </option>
+                  <option value="Fund 1 Completo">
+                    Ensino fundamental (1ª a 4ª) - COMPLETO
+                  </option>
+                  <option value="Fund 2 Incompleto">
+                    Ensino fundamental (5ª a 8ª) - INCOMPLETO
+                  </option>
+                  <option value="Fund 2 Completo">
+                    Ensino fundamental (5ª a 8ª) - COMPLETO
+                  </option>
+                  <option value="Medio Incompleto">
+                    Ensino Médio - INCOMPLETO
+                  </option>
+                  <option value="Medio Completo">
+                    Ensino Médio - COMPLETO
+                  </option>
+                  <option value="Superior Incompleto">
+                    Ensino Superior - INCOMPLETO
+                  </option>
+                  <option value="Superior Completo">
+                    Ensino Superior - COMPLETO
+                  </option>
+                  <option value="Pos Graduacao">
+                    Especialização, Mestrado ou Doutorado
+                  </option>
+                  <option value="Nao tive">Não tive pai ou responsável</option>
+                  <option value="Nao sei">Não sei responder</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label"
+                  >16 - Qual a renda mensal da sua família?</label
+                >
+                <select class="form-select" name="q16">
+                  <option value="">Selecione (Opcional)...</option>
+                  <option value="Até 1 salário">
+                    Até 1 salário mínimo (R$ 1.621,00)
+                  </option>
+                  <option value="1 a 3">Entre 1 e 3 salários mínimos</option>
+                  <option value="4 a 6">Entre 4 e 6 salários mínimos</option>
+                  <option value="7 a 10">Entre 7 e 10 salários mínimos</option>
+                  <option value="Acima de 10">
+                    Acima de 10 salários mínimos
+                  </option>
+                  <option value="Prefiro não responder">
+                    Prefiro não responder
+                  </option>
+                </select>
+              </div>
+
+              <div class="mb-4">
+                <label class="form-label"
+                  >17 - Você participa com sua renda mensal na vida econômica da
+                  sua família?</label
+                >
+                <select class="form-select" name="q17" required>
+                  <option value="">Selecione...</option>
+                  <option value="Nao possuo renda">
+                    Não possuo renda mensal
+                  </option>
+                  <option value="Dependo da familia">
+                    Possuo renda, mas dependo em parte da família
+                  </option>
+                  <option value="Independente">
+                    Possuo renda, mas a família não depende de mim
+                  </option>
+                  <option value="Ajuda parcial">
+                    Possuo renda e a família depende parcialmente de mim
+                  </option>
+                  <option value="Sustento total">
+                    Possuo renda e sou inteiramente responsável pela família
+                  </option>
+                </select>
+              </div>
+
+              <div class="d-flex justify-content-between">
+                <button type="button" class="btn btn-secondary btn-prev">
+                  Voltar
+                </button>
+                <button type="button" class="btn btn-primary btn-next">
+                  Próxima Seção
+                </button>
+              </div>
+            </div>
+
+            <div class="step" id="step3">
+              <h5 class="border-bottom pb-2 mb-4 text-primary">
+                Seção 3: Perfil Escolar/Acadêmico
+              </h5>
+              <div class="mb-3">
+                <label>18 - Ano de conclusão do Ensino Médio:</label
+                ><select class="form-select" name="q18" required>
+                  <option value="">Selecione...</option>
+                  <option>Antes de 2020</option>
+                  <option>2020</option>
+                  <option>2021</option>
+                  <option>2022</option>
+                  <option>2023</option>
+                  <option>2024</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label>19 - Tipo de escola no ensino médio:</label
+                ><select class="form-select" name="q19" required>
+                  <option value="">Selecione...</option>
+                  <option>Estadual</option>
+                  <option>Federal</option>
+                  <option>Municipal</option>
+                  <option>Privada</option>
+                  <option>Estadual do campo</option>
+                  <option>Não sei responder</option>
+                  <option>Prefiro não responder</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label>20 - Modalidade do Ensino Médio:</label
+                ><select class="form-select" name="q20" required>
+                  <option value="">Selecione...</option>
+                  <option>Ensino médio Regular</option>
+                  <option>Educação Profissional Técnica</option>
+                  <option>Curso ou exame supletivo</option>
+                  <option>ENEM</option>
+                  <option>ENCCEJA</option>
+                  <option>EJA</option>
+                  <option>Não sei responder</option>
+                  <option>Prefiro não responder</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label>21 - Tem diploma de curso superior?</label
+                ><select class="form-select" name="q21" required>
+                  <option value="">Selecione...</option>
+                  <option>Sim</option>
+                  <option>Não</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label>22 - Se sim, qual o grau acadêmico?</label
+                ><select class="form-select" name="q22">
+                  <option value="">Selecione (Opcional)...</option>
+                  <option>Licenciatura</option>
+                  <option>Bacharelado</option>
+                  <option>Tecnólogo</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label>23 - Curso que está ingressando:</label
+                ><select class="form-select" name="q23" required>
+                  <option value="">Selecione...</option>
+                  <option>Agronomia</option>
+                  <option>Biomedicina</option>
+                  <option>Ciências Biológicas - Bacharelado</option>
+                  <option>Ciências Biológicas - Licenciatura</option>
+                  <option>Ciências da Computação</option>
+                  <option>Direito</option>
+                  <option>Educação Física - Bacharelado</option>
+                  <option>Educação Física - Licenciatura</option>
+                  <option>Enfermagem</option>
+                  <option>Engenharia Florestal</option>
+                  <option>Física</option>
+                  <option>Fisioterapia</option>
+                  <option>Geografia - Bacharelado</option>
+                  <option>Geografia - Licenciatura</option>
+                  <option>História</option>
+                  <option>Inteligência Artificial</option>
+                  <option>Letras - Inglês</option>
+                  <option>Letras - Português</option>
+                  <option>Matemática</option>
+                  <option>Medicina</option>
+                  <option>Medicina Veterinária</option>
+                  <option>Pedagogia - Matutino</option>
+                  <option>Pedagogia - Noturno</option>
+                  <option>Psicologia</option>
+                  <option>Química - Bacharelado</option>
+                  <option>Química - Licenciatura</option>
+                  <option>Zootecnia</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label>24 - Ingressou no curso que seria sua:</label
+                ><select class="form-select" name="q24" required>
+                  <option value="">Selecione...</option>
+                  <option>1º opção</option>
+                  <option>2º opção</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label>25 - Você trocaria seu curso atual?</label
+                ><select class="form-select" name="q25" required>
+                  <option value="">Selecione...</option>
+                  <option>Sim</option>
+                  <option>Não</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label>26 - Como conheceu a UFJ?</label
+                ><select class="form-select" name="q26" required>
+                  <option value="">Selecione...</option>
+                  <option>Pessoa conhecida me falou</option>
+                  <option>Rede social</option>
+                  <option>Conheço pessoas que estudam na UFJ</option>
+                  <option>Conheço pessoas que trabalham na UFJ</option>
+                  <option>Evento ou projeto da UFJ na minha escola</option>
+                  <option>Minha escola indicou</option>
+                  <option>Não sei responder</option>
+                  <option>Prefiro não responder</option>
+                  <option>TV ou rádio</option>
+                  <option>Indo ao Descomplica UFJ</option>
+                  <option>Vem Pra UFJ</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label>27 - Motivo de ter escolhido a UFJ:</label
+                ><select class="form-select" name="q27" required>
+                  <option value="">Selecione...</option>
+                  <option>Universidade gratuita</option>
+                  <option>Prestígio Institucional</option>
+                  <option>Recomendação da família</option>
+                  <option>Proximidade do domicílio</option>
+                  <option>Recomendação da minha comunidade (indígena ou quilombola)</option>
+                  <option>Nota no Sisu</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label>28 - Motivo da escolha do curso:</label
+                ><select class="form-select" name="q28" required>
+                  <option value="">Selecione...</option>
+                  <option>Sempre quis</option>
+                  <option>Afinidade na área</option>
+                  <option>Mercado de trabalho</option>
+                  <option>Vocação</option>
+                  <option>Curso mais fácil de passar</option>
+                  <option>Ascensão social</option>
+                  <option>Prestígio social</option>
+                  <option>Necessidade da minha comunidade indígena ou quilombola</option>
+                  <option>Escolha da família</option>
+                </select>
+              </div>
+              <div class="mb-4">
+                <label>29 - Turno ideal para o curso:</label
+                ><select class="form-select" name="q29" required>
+                  <option value="">Selecione...</option>
+                  <option>Integral</option>
+                  <option>Matutino</option>
+                  <option>Vespertino</option>
+                  <option>Noturno</option>
+                  <option>Atual é adequado</option>
+                </select>
+              </div>
+
+              <div class="d-flex justify-content-between">
+                <button type="button" class="btn btn-secondary btn-prev">
+                  Voltar
+                </button>
+                <button type="button" class="btn btn-primary btn-next">
+                  Próxima Seção
+                </button>
+              </div>
+            </div>
+
+            <div class="step" id="step4">
+              <h5 class="border-bottom pb-2 mb-4 text-primary">
+                Seção 4: Recursos Financeiros e Moradia
+              </h5>
+
+              <div class="mb-3">
+                <label>30 - Exerce atividade profissional?</label
+                ><select class="form-select" name="q30" required>
+                  <option value="">Selecione...</option>
+                  <option>Não trabalho, procuro</option>
+                  <option>Não trabalho, não procuro</option>
+                  <option>Trabalho não remunerado</option>
+                  <option>Trabalho remunerado</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label>31 - Jornada semanal habitual:</label
+                ><select class="form-select" name="q31" required>
+                  <option value="">Selecione...</option>
+                  <option>Menos de 20h</option>
+                  <option>21 a 30h</option>
+                  <option>31 a 40h</option>
+                  <option>Mais de 44h</option>
+                  <option>Trabalho eventualmente</option>
+                  <option>Não exerço</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label>32 - Pretende trabalhar durante os estudos?</label
+                ><select class="form-select" name="q32" required>
+                  <option value="">Selecione...</option>
+                  <option>Sim</option>
+                  <option>Não</option>
+                  <option>Não sei</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label"
+                  >33 - Como pretende se manter financeiramente? (Múltipla
+                  escolha)</label
+                >
+                <div class="form-check">
+                  <input
+                    class="form-check-input check-q33"
+                    type="checkbox"
+                    name="q33"
+                    value="Com recurso dos pais"
+                  />
+                  Com recurso dos pais
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input check-q33"
+                    type="checkbox"
+                    name="q33"
+                    value="Com recursos próprios"
+                  />
+                  Com recursos próprios
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input check-q33"
+                    type="checkbox"
+                    name="q33"
+                    value="Com bolsa de estudos"
+                  />
+                  Com bolsa de estudos
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input check-q33"
+                    type="checkbox"
+                    name="q33"
+                    value="Com ajuda de outras pessoas"
+                  />
+                  Com ajuda de outras pessoas
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input check-q33"
+                    type="checkbox"
+                    name="q33"
+                    value="Não sei responder"
+                  />
+                  Não sei responder
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label"
+                  >34 - Dispositivos eletrônicos que possui: (Múltipla
+                  escolha)</label
+                >
+                <div class="form-check">
+                  <input
+                    class="form-check-input check-q34"
+                    type="checkbox"
+                    name="q34"
+                    value="Smartphone"
+                  />
+                  Smartphone
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input check-q34"
+                    type="checkbox"
+                    name="q34"
+                    value="Notebook"
+                  />
+                  Notebook
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input check-q34"
+                    type="checkbox"
+                    name="q34"
+                    value="Tablet"
+                  />
+                  Tablet
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input check-q34"
+                    type="checkbox"
+                    name="q34"
+                    value="Chromebook"
+                  />
+                  Chromebook
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input check-q34"
+                    type="checkbox"
+                    name="q34"
+                    value="Desktop"
+                  />
+                  Desktop
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input check-q34"
+                    type="checkbox"
+                    name="q34"
+                    value="Kindle"
+                  />
+                  Kindle
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input check-q34"
+                    type="checkbox"
+                    name="q34"
+                    value="Nenhum"
+                  />
+                  Não possuo nenhum
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label>35 - Terá internet em casa?</label
+                ><select class="form-select" name="q35" required>
+                  <option value="">Selecione...</option>
+                  <option>Sim</option>
+                  <option>Não</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label>36 - Tem internet no celular?</label
+                ><select class="form-select" name="q36" required>
+                  <option value="">Selecione...</option>
+                  <option>Sim</option>
+                  <option>Não</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label>37 - Meio de locomoção principal para aulas:</label
+                ><select class="form-select" name="q37" required>
+                  <option value="">Selecione...</option>
+                  <option>Ônibus UFJ</option>
+                  <option>Transporte público</option>
+                  <option>Transporte alternativo</option>
+                  <option>Transporte solidário (revezamento de carona)</option>
+                  <option>Carro próprio</option>
+                  <option>Moto própria</option>
+                  <option>Biciclete</option>
+                  <option>A pé</option>
+                  <option>Prefiro não responder</option>
+                </select>
+              </div>
+              <div class="mb-4">
+                <label>38 - Como vai morar em Jataí?</label
+                ><select class="form-select" name="q38" required>
+                  <option value="">Selecione...</option>
+                  <option>Com os pais</option>
+                  <option>Com amigos</option>
+                  <option>Com parentes</option>
+                  <option>Sozinho em casa alugada</option>
+                  <option>Sozinho em casa própria</option>
+                  <option>Em república</option>
+                  <option>Não irei morar em Jataí</option>
+                  <option>Não sei responder ainda</option>
+                </select>
+              </div>
+
+              <div class="d-flex justify-content-between">
+                <button type="button" class="btn btn-secondary btn-prev">
+                  Voltar
+                </button>
+                <button type="button" class="btn btn-primary btn-next">
+                  Próxima Seção
+                </button>
+              </div>
+            </div>
+
+            <div class="step" id="step5">
+              <h5 class="border-bottom pb-2 mb-4 text-primary">
+                Seção 5: Assistência Estudantil e Acessibilidade
+              </h5>
+
+              <div class="mb-3">
+                <label class="form-label"
+                  >39 - Você precisa de algum auxílio ou Assistência
+                  Estudantil?</label
+                >
+                <select class="form-select" name="q39" id="q39" required>
+                  <option value="">Selecione...</option>
+                  <option value="Sim">Sim</option>
+                  <option value="Não">Não</option>
+                </select>
+              </div>
+
+              <div class="mb-3 hidden-field" id="divQ40">
+                <label class="form-label">40 - Qual sua necessidade?</label>
+                <select class="form-select" name="q40" id="q40">
+                  <option value="">Selecione...</option>
+                  <option value="Bolsa alimentação">Bolsa alimentação</option>
+                  <option value="Bolsa Moradia">Bolsa Moradia</option>
+                  <option value="Transporte">Transporte</option>
+                  <option value="Apoio psicológico">Apoio psicopedagógico</option>
+                  <option value="Apoio psicológico">Material pedagógico</option>
+                  <option value="Outro">Outro</option>
+                </select>
+              </div>
+
+              <div class="mb-3 hidden-field" id="divQ40Outro">
+                <label class="form-label">Especifique a necessidade:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="q40_outro"
+                  id="q40_outro"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label"
+                  >41 - Diagnóstico médico (Múltipla escolha):</label
+                >
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="q41"
+                    value="Visual"
+                  />
+                  Deficiência Visual (uso de óculos apenas para correção visual não se aplica)
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="q41"
+                    value="Auditiva"
+                  />
+                  Deficiência Auditiva
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="q41"
+                    value="Intelectual"
+                  />
+                  Deficiência Intelectual
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="q41"
+                    value="Múltipla"
+                  />
+                  Deficiência Múltipla
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="q41"
+                    value="Transtornos Globais de Desenvolvimento"
+                  />
+                  Transtornos Globais de Desenvolvimento
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="q41"
+                    value="TEA"
+                  />
+                  Transtorno do Espectro Autista (TEA)
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="q41"
+                    value="Oculta"
+                  />
+                  Deficiência Oculta
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="q41"
+                    value="Altas Habilidades/Superdotação"
+                  />
+                  Altas habilidades/Superdotação
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="q41"
+                    value="Nenhum"
+                  />
+                  Nenhum
+                </div>
+              </div>
+
+              <div class="mb-4">
+                <label class="form-label"
+                  >42 - Necessidade educacional específica (Múltipla
+                  escolha):</label
+                >
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="q42"
+                    value="TDAH"
+                  />
+                  Sim, TDAH
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="q42"
+                    value="Discalculia"
+                  />
+                  Sim, Discalculia
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="q42"
+                    value="Dislexia"
+                  />
+                  Sim, Dislexia
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="q42"
+                    value="Dislexia"
+                  />
+                  Sim, Dificuldades de aprendizagem
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="q42"
+                    value="Nenhuma"
+                  />
+                  Não, não possuo
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-between">
+                <button type="button" class="btn btn-secondary btn-prev">
+                  Voltar
+                </button>
+                <button type="submit" class="btn btn-success" id="btnSubmit">
+                  Enviar Respostas
+                </button>
+              </div>
+            </div>
+
+            <div class="step text-center py-5" id="stepSuccess">
+              <h2 class="text-success mb-3">Obrigado!</h2>
+              <p class="lead">
+                Suas respostas foram salvas com sucesso e nos ajudarão a
+                melhorar as políticas institucionais da UFJ.
+              </p>
+              <p class="text-muted">Você já pode fechar esta aba.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // === 1. CONFIGURAÇÕES ===
+      const scriptURL = "https://script.google.com/macros/s/AKfycbwGi2QwbN5F3_mbhCdtzCOGcv5DAasyLxTskP7o6uoP_doeEo-sF8GOWpguGNC-kIGEaw/exec";
+      const form = document.getElementById("formUfj");
+
+      // === 2. LÓGICA DO WIZARD (Passo a Passo) ===
+      let currentStep = 0;
+      const steps = document.querySelectorAll(".step:not(#stepSuccess)");
+
+      document.querySelectorAll(".btn-next").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          // Verifica se todos os campos obrigatórios da seção atual estão preenchidos
+          const inputs = steps[currentStep].querySelectorAll(
+            "input[required], select[required]",
+          );
+          let valid = true;
+          inputs.forEach((input) => {
+            if (!input.checkValidity()) {
+              input.reportValidity();
+              valid = false;
+            }
+          });
+
+          if (valid) {
+            steps[currentStep].classList.remove("active");
+            currentStep++;
+            steps[currentStep].classList.add("active");
+            window.scrollTo(0, 0);
+          }
+        });
+      });
+
+      document.querySelectorAll(".btn-prev").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          steps[currentStep].classList.remove("active");
+          currentStep--;
+          steps[currentStep].classList.add("active");
+          window.scrollTo(0, 0);
+        });
+      });
+
+      // === 3. LÓGICAS CONDICIONAIS ===
+      // Q5 -> Q6 (Indígena)
+      document.getElementById("q5").addEventListener("change", function () {
+        const val = this.value;
+        const div = document.getElementById("divQ6");
+        const input = document.getElementById("q6");
+        if (val.includes("Indígena")) {
+          div.style.display = "block";
+          input.required = true;
+        } else {
+          div.style.display = "none";
+          input.required = false;
+          input.value = "";
+        }
+      });
+
+      // Q8 -> Q9 (Filhos)
+      document.getElementById("q8").addEventListener("change", function () {
+        const div = document.getElementById("divQ9");
+        const input = document.getElementById("q9");
+        if (this.value === "Sim") {
+          div.style.display = "block";
+          input.required = true;
+        } else {
+          div.style.display = "none";
+          input.required = false;
+          input.value = "";
+        }
+      });
+
+      // Q39 -> Q40 (Auxílio) -> Outro
+      document.getElementById("q39").addEventListener("change", function () {
+        const div = document.getElementById("divQ40");
+        const input = document.getElementById("q40");
+        if (this.value === "Sim") {
+          div.style.display = "block";
+          input.required = true;
+        } else {
+          div.style.display = "none";
+          input.required = false;
+          input.value = "";
+          document.getElementById("divQ40Outro").style.display = "none";
+        }
+      });
+
+      document.getElementById("q40").addEventListener("change", function () {
+        const div = document.getElementById("divQ40Outro");
+        const input = document.getElementById("q40_outro");
+        if (this.value === "Outro") {
+          div.style.display = "block";
+          input.required = true;
+        } else {
+          div.style.display = "none";
+          input.required = false;
+          input.value = "";
+        }
+      });
+
+      // === 4. API DO IBGE (Estados e Cidades) ===
+      const ufSelect = document.getElementById("q10");
+      const cidadeSelect = document.getElementById("q11");
+
+      fetch(
+        "https://servicodados.ibge.gov.br/api/v1/localidades/estados?orderBy=nome",
+      )
+        .then((res) => res.json())
+        .then((estados) => {
+          estados.forEach((estado) => {
+            ufSelect.innerHTML += `<option value="${estado.sigla}">${estado.nome}</option>`;
+          });
+        });
+
+      ufSelect.addEventListener("change", (e) => {
+        const uf = e.target.value;
+        cidadeSelect.innerHTML = '<option value="">Carregando...</option>';
+        cidadeSelect.disabled = true;
+        if (uf) {
+          fetch(
+            `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${uf}/municipios`,
+          )
+            .then((res) => res.json())
+            .then((cidades) => {
+              cidadeSelect.innerHTML =
+                '<option value="">Selecione a cidade</option>';
+              cidades.forEach((c) => {
+                cidadeSelect.innerHTML += `<option value="${c.nome}">${c.nome}</option>`;
+              });
+              cidadeSelect.disabled = false;
+            });
+        }
+      });
+
+      // === 5. ENVIO DOS DADOS (Tratando Checkboxes) ===
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const btnSubmit = document.getElementById("btnSubmit");
+        btnSubmit.disabled = true;
+        btnSubmit.innerText = "Enviando...";
+
+        // Coleta os dados básicos
+        const formData = new FormData(form);
+        const payload = new URLSearchParams();
+
+        // Passa inputs normais para o payload
+        for (const pair of formData.entries()) {
+          if (!["q33", "q34", "q41", "q42"].includes(pair[0])) {
+            payload.append(pair[0], pair[1]);
+          }
+        }
+
+        // Agrupa os checkboxes separando por ponto e vírgula
+        const multiFields = ["q33", "q34", "q41", "q42"];
+        multiFields.forEach((name) => {
+          const checked = Array.from(
+            document.querySelectorAll(`input[name="${name}"]:checked`),
+          ).map((cb) => cb.value);
+          payload.append(name, checked.join("; "));
+        });
+
+        // Dispara para o Apps Script
+        fetch(scriptURL, { method: "POST", body: payload, mode: 'no-cors' })
+          .then(() => {
+            steps[currentStep].classList.remove("active");
+            document.getElementById("intro").style.display = "none";
+            document.getElementById("stepSuccess").classList.add("active");
+          })
+          .catch((err) => {
+            alert("Erro na conexão. Tente novamente.");
+            btnSubmit.disabled = false;
+            btnSubmit.innerText = "Enviar Respostas";
+          });
+      });
+    </script>
+  </body>
+</html>
